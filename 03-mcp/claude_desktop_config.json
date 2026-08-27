@@ -1,0 +1,52 @@
+{
+  "preferences": {
+    "launchPreviewPersistedWorkspaces": [],
+    "launchPreviewSessionScopedSessions": [],
+    "coworkHipaaRestricted": false,
+    "coworkWebSearchEnabled": true,
+    "remoteToolsDeviceName": "davidyuli-local",
+    "coworkPreferredBrowser": "built_in",
+    "coworkModelAutoFallbackByAccount": {
+      "db017bf8-99af-4548-80c5-aecbb00ec852": true,
+      "cd0a9100-cd9c-4652-b7c8-57c1c41d0fc0": true
+    },
+    "coworkBrowserToolsEnabled": true,
+    "epitaxyPrefs": {
+      "ccd-sessions-filter": {
+        "state": {
+          "selectedProjects": []
+        },
+        "version": 0
+      },
+      "desktop-frame.paneStore.v1": {
+        "state": {
+          "extraPanesByMode": {},
+          "colWeightsByMode": {},
+          "rowSplit": 0.5,
+          "draftNonce": 0
+        },
+        "version": 4
+      },
+      "starred-local-code-sessions": [],
+      "starred-cowork-spaces": [],
+      "starred-session-groups": [],
+      "dframe-group-scopes": {},
+      "dframe-local-slice": {
+        "pinnedOrder": [],
+        "homeProjectsPinnedOrder": []
+      }
+    },
+    "ccdScheduledTasksEnabled": true,
+    "coworkScheduledTasksEnabled": true,
+    "bypassPermissionsGateByAccount": {
+      "cd0a9100-cd9c-4652-b7c8-57c1c41d0fc0": false
+    }
+  },
+  "coworkUserFilesPath": "/Users/yuliia/Claude",
+  "mcpServers": {
+    "oda-ft": {
+      "command": "node",
+      "args": ["/Users/yuliia/Projekt-Y-Test/03-mcp/dist/index.js"]
+    }
+  }
+}
