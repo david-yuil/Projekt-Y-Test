@@ -1,0 +1,25 @@
+{
+  "name": "projekt-y-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/david-yuil/Projekt-Y-Test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/david-yuil/Projekt-Y-Test/issues"
+  },
+  "homepage": "https://github.com/david-yuil/Projekt-Y-Test#readme",
+  "devDependencies": {
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2"
+  }
+}
