@@ -48,7 +48,7 @@ Connecting it to Claude Desktop
    `search_actors`, `get_case_votes`) should appear as available tools in a
    new conversation.
 
-## Tools
+Tools
 
 | Tool | What it does |
 |---|---|
@@ -57,7 +57,7 @@ Connecting it to Claude Desktop
 | `search_actors` | Search MPs/committees/ministries by name |
 | `get_case_votes` | Fetch voting session(s) and tallies for a case |
 
-## Design decisions
+Design decisions
 
 - **Which endpoints are exposed**: `Sag` (cases), `Aktør` (people/committees),
   and the `Sagstrin` → `Afstemning` → `Stemme` chain (votes), because these
@@ -81,8 +81,35 @@ Connecting it to Claude Desktop
   live `Stemmetype` endpoint instead of guessing. Documented in
   `PROCESS.md`.
 
-## What I skipped
+What I skipped
 
 - Document (`Dokument`) search/retrieval — a fifth tool, cut for time.
 - Pagination beyond a single `top` page (no `$skip`/cursor support).
 - Caching beyond the in-process `Stemmetype` label cache.
+
+Verified working, live
+
+All four tools were tested against the live oda.ft.dk API, connected
+through Claude Desktop:
+
+- `search_cases` — searched for "udlændinge" (immigration), returned 20
+  real bills (L 15, L 16, L 17, L 21, etc.) with correct titles and dates.
+- `get_case_votes` — fetched the vote tally for case L 15; also surfaced
+  a real discrepancy between the API's numeric `totals` and the case's
+  official narrative conclusion (see `PROCESS.md`).
+- `get_case_details` — fetched case id 1, a minimal committee record with
+  no case number or summary, correctly showing that not every case is a
+  full bill. Screenshot: `screenshots/get-case-details-example.png`.
+- `search_actors` — searched for "Frederiksen", correctly returned the
+  current PM (Mette Frederiksen) plus several unrelated historical MPs
+  sharing the surname. Screenshot: `screenshots/search-actors-frederiksen.png`.
+
+AI assistance
+
+Claude wrote most of the implementation code (the OData client, tool
+registration, flattening logic) based on my decisions about which
+entities to expose and how errors should be handled. I reviewed the
+generated code, caught and had it fix the hardcoded vote-type mapping
+issue described above and in PROCESS.md, and did all the live testing
+against Claude Desktop myself. See PROCESS.md for the full breakdown of
+what I handed to the model versus decided myself.
