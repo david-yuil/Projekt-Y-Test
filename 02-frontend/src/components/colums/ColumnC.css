@@ -122,4 +122,17 @@
   width: 63px;
   height: 23px;
   margin-top: 13px;
+  animation: pulse 1.5s ease-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
 }
