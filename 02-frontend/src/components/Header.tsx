@@ -1,4 +1,6 @@
 import { useState } from "react";
+import LogoIcon from "../assets/icons/Vector (1).svg";
+import BriefIcon from "../assets/icons/icon.svg";
 
 const navItems = ["Politik", "Business", "International", "Tech", "Succes"];
 
@@ -7,7 +9,9 @@ export function Header() {
 
   return (
     <header className="site-header">
-      <button type="button" className="logo">y</button>
+      <button type="button" className="logo">
+        <img src={LogoIcon} alt="Projekt Y" />
+      </button>
 
       <nav className={menuOpen ? "nav nav-open" : "nav"}>
         {navItems.map((item) => (
@@ -17,7 +21,10 @@ export function Header() {
         ))}
       </nav>
 
-      <button type="button" className="brief-button">Dagens brief</button>
+      <button type="button" className="brief-button">
+       <img src={BriefIcon} alt="" className="brief-icon"/>
+        <p className="brief-p">Dagens brief</p>
+      </button>
 
       <button
         type="button"

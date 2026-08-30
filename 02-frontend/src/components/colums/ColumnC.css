@@ -1,0 +1,125 @@
+.col-c {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+
+.col-c-overlay {
+  position: relative;
+  min-height: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.col-c-overlay--tall {
+  flex: 1;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+}
+
+.col-c-overlay-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+  border-radius: 0;
+}
+
+.col-c-overlay-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.2) 55%, rgba(0, 0, 0, 0) 100%);
+}
+
+.col-c-overlay-body {
+  position: relative;
+  padding: 16px;
+  padding-top: 140px;
+}
+
+.col-c-plain-category {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.col-c-plain-category-top {
+  color: #666;
+  font-family: IBM Plex Mono;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 10px;
+  line-height: 100%;
+  letter-spacing: 8%;
+  text-align: left;
+  margin-top: 13px;
+}
+
+.col-c-plain-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.col-c-overlay-category {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+
+.col-c-overlay-title {
+  font-family: Public Sans;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 32px;
+  line-height: 113%;
+  letter-spacing: -4%;
+  color: #EEEDED;
+  text-align: left;
+}
+
+.col-c-overlay-title-top {
+  font-family: Public Sans;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 35px;
+  color: #322F32;
+  line-height: 102%;
+  letter-spacing: -4%;
+  text-align: left;
+}
+
+.col-c-video-badge {
+  padding-top: 2px;
+  padding-right: 8px;
+  padding-bottom: 2px;
+  padding-left: 4px;
+  gap: 2px;
+  opacity: 1;
+  border-radius: 44px;
+  background: #FD5643;
+  font-family: IBM Plex Mono;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 10px;
+  color: #EEEDED;
+  line-height: 100%;
+  letter-spacing: 8%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  width: 63px;
+  height: 23px;
+  margin-top: 13px;
+}

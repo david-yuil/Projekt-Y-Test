@@ -1,0 +1,38 @@
+.plain-pair {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+@media (min-width: 640px) {
+    .plain-pair {
+        flex-direction: row;
+    }
+}
+
+.plain-pair-card {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.plain-pair-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 0 12px;
+}
+
+.plain-pair-title {
+    font-family: Public Sans;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 40px;
+    line-height: 122%;
+    letter-spacing: -4%;
+    text-align: left;
+}

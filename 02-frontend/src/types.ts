@@ -9,7 +9,10 @@ export type ArticleCard =
       value: string;
     })
   | (BaseCard & { kind: "quote"; source: string })
-  | (BaseCard & { kind: "list"; items: string[] })
+  | (BaseCard & {
+      kind: "list";
+      items: { text: string; hasAudio?: boolean }[];
+    })
   | (BaseCard & { kind: "guide"; urlImage: string; author: string });
 
 export type HeroArticle = {

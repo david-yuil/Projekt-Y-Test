@@ -1,4 +1,7 @@
 import type { ArticleCard, HomepageData } from "../types";
+import heroPhoto from "../assets/images/231b116c36f6f918608053c1b851158018656af1 (1).png";
+import CardPhoto2 from "../assets/images/3c8a7747586d05307c4a235c56594551dfab6503.png";
+import CardPhoto6 from "../assets/images/dc85f9d031dbda4b94943e5b572d8c812403fa11.png";
 
 export const mockCards: ArticleCard[] = [
   {
@@ -7,8 +10,7 @@ export const mockCards: ArticleCard[] = [
     category: "DANSK POLITIK",
     title:
       "Virksomheder giver helt nye måder for at få fat i boligens friværdi",
-    urlImage:
-      "https://images.unsplash.com/photo-1560184897-ae75f418493e?w=800&q=80",
+    urlImage: CardPhoto6,
     hasVideo: true,
   },
   {
@@ -26,8 +28,7 @@ export const mockCards: ArticleCard[] = [
     kind: "standard",
     category: "DANSK POLITIK",
     title: "København vil forbyde fossile varebiler i centrum",
-    urlImage:
-      "https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=800&q=80",
+    urlImage: CardPhoto2,
     hasVideo: false,
   },
   {
@@ -53,8 +54,8 @@ export const mockCards: ArticleCard[] = [
     kind: "list",
     category: "DANSK POLITIK",
     title: "Stor uro på markederne",
-   // Awkward case on purpose: only one item instead of the usual three.
-    items: ["Stor uro på markederne: Frygtindeks stiger markant"],
+    // Awkward case on purpose: only one item instead of the usual three.
+    items: [{ text: "Stor uro på markederne: Frygtindeks stiger markant" }],
   },
   {
     id: "card-7",
@@ -86,8 +87,7 @@ export const mockHomepageData: HomepageData = {
   hero: {
     category: "DANSK POLITIK",
     title: "Regeringen fremlægger ny plan for dansk økonomi",
-    urlImage:
-      "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=1200&q=80",
+    urlImage: heroPhoto,
     relatedHeadlines: [
       "Regeringen vil ændre reglerne for offentlig administration",
       "Nyt udspil fra regeringen skal styrke erhvervslivet",
@@ -97,8 +97,6 @@ export const mockHomepageData: HomepageData = {
   cards: mockCards,
 };
 
-// A separate, empty dataset to demonstrate the "empty" state:
-// a successful response with no articles to show.
 export const emptyHomepageData: HomepageData = {
   breaking: mockHomepageData.breaking,
   hero: mockHomepageData.hero,
